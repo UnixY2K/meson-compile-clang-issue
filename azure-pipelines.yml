@@ -16,13 +16,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-      iwr -useb get.scoop.sh | iex
-      scoop install ninja
+      pip install ninja
       pip install meson
-- task: PowerShell@2
-  inputs:
-    filePath: 'compile-meson-MSVC-link.ps1'
-
+      ./compile-meson-MSVC-link.ps1
 
 
