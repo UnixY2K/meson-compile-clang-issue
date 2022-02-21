@@ -7,12 +7,10 @@ echo "configuring directories"
 echo "##########################################"
 $Folder = 'builddir-MSVC-link'
 if (Test-Path -Path $Folder) {
-    Remove-Item $Folder -Recurse -Force -Confirm:$false > $null
+    Remove-Item $Folder -Recurse -Force -Confirm:$false
     mkdir $Folder > $null
     mkdir $Folder/libHello > $null
 }
-mkdir $Folder > $null
-mkdir $Folder/libHello > $null
 echo "##########################################"
 echo "Compiling..."
 echo "##########################################"
