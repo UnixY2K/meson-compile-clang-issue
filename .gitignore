@@ -1,0 +1,4 @@
+# buid outputs
+build_manual/
+builddir-lld-link/
+builddir-MSVC-link/
