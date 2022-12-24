@@ -1,3 +1,12 @@
+## check if CXX and CXX_LD are set and unset them
+if (Test-Path Env:\CXX) {
+    echo "unset the CXX variable"
+    Remove-Item Env:\CXX
+}
+if (Test-Path Env:\CXX_LD) {
+    echo "unset the CXX_LD variable"
+    Remove-Item Env:\CXX_LD
+}
 # the compiler must be clang++    (default)
 # and the linker must be link.exe (default)
 # to do so install on a clean machine VS(Ex: VS2022) and then llvm
