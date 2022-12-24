@@ -15,7 +15,7 @@ echo "set the CXX to clang++"
 $env:CXX="clang++"
 echo "set the CXX_LD to lld-link"
 $env:CXX_LD = 'lld-link'
-meson $Folder --backend ninja
+meson setup $Folder --backend ninja
 meson compile -C $Folder
 ## Unset Environment Variables
 echo "unset the CXX_LD variable"

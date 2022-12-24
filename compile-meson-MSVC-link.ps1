@@ -15,7 +15,7 @@ echo "##########################################"
 echo "Compiling..."
 echo "##########################################"
 # by default it will use clang++/link.exe(MSVC)
-meson $Folder --backend ninja
+meson setup $Folder --backend ninja
 # this will give LNK1107, as the static library was generated with T(--thin)
 # MSVC link.exe does not support static thin libraries
 meson compile -C $Folder
